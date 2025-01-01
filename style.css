@@ -142,6 +142,7 @@ footer {
   font-size: 14px;
   font-weight: 400;
   color: rgb(103, 106, 108);
+  font-weight: 500;
 }
 .boxcontent {
   display: flex;
