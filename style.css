@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(245, 247, 250);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+header {
+  width: 100vw;
+  height: 5%;
+  background-color: rgb(33, 39, 51);
+  overflow: hidden;
+  position: sticky;
+  top: 0px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(155, 162, 189);
+  padding: 0px 30px;
+  align-items: center;
+  height: 100%;
+  position: sticky;
+}
+.logodiv {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+.logodiv > img {
+  width: 30px;
+  height: 30px;
+}
+.logodiv > p {
+  font-family: "Nunito Sans", serif;
+  font-size: 30px;
+}
+.userdetails {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 30px;
+}
+.userdetails > img {
+  width: 100px;
+  height: 40px;
+
+  /* margin-left: 5vw; */
+}
+.userdetails > p {
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: 1px solid rgb(155, 162, 189);
+  font-family: "Nunito Sans", serif;
+  font-size: 16px;
+}
+.userdetails > p:hover {
+  background-color: rgb(155, 162, 189);
+  color: black;
+}
+.bodycontent {
+  display: flex;
+  width: 100vw;
+  height: 93.5%;
+}
+.navigationcontent {
+  width: 20%;
+  background-color: rgb(33, 39, 51);
+}
+footer {
+  width: 100%;
+  height: 2.5%;
+  background-color: rgb(33, 39, 51);
+  color: rgb(155, 162, 189);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: "Nunito Sans", serif;
+  position: sticky;
+  position: absolute;
+  bottom: 0px;
+}
+
+.navigationcontent {
+  color: rgb(155, 162, 189);
+  font-family: "Nunito Sans", serif;
+  padding: 30px 20px;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navigationcontent > ul > li {
+  list-style-type: none;
+  padding: 10px 10px;
+  width: 100%;
+  border-radius: 20px;
+}
+.navigationcontent > ul > li:hover {
+  background-color: rgb(245, 247, 250);
+  color: rgb(33, 39, 51);
+}
+.navigationcontent > ul > li > i {
+  margin-right: 10px;
+}
+.mainpage {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  padding: 20px 10px 40px;
+  font-family: "Open Sans", serif;
+  gap: 30px;
+}
+.boxrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.singlebox {
+  width: 20%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+.singlebox > h4 {
+  border-bottom: 1px solid rgb(232, 235, 237);
+  padding: 15px 90px 8px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(103, 106, 108);
+}
+.boxcontent {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 8px 15px;
+}
+.boxcontentlastrow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.boxcontent > h3 {
+  font-size: 30px;
+  font-weight: 100;
+  color: rgb(103, 106, 108);
+}
+.boxcontentlastrow > p {
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(103, 106, 108);
+}
+.lastcontent,
+.lastcontent > i {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(28, 132, 198) !important;
+  font-weight: 600 !important;
+}
+.tablebox {
+  width: 100%;
+  height: 45%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.tablebox > h4 {
+  border-bottom: 1px solid rgb(232, 235, 237);
+  padding: 1%;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(103, 106, 108);
+}
+.tablediv {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ddd;
+  margin: 1% 0.5%;
+
+  /* Hide scrollbar for Webkit-based browsers */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.tablediv::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: #f4f4f4;
+  position: sticky;
+  top: 0; /* Sticky header at the top */
+  z-index: 2;
+}
+
+th,
+td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+th {
+  font-weight: bold;
+}
+
+.lasttwoboxdiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
