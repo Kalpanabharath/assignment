@@ -8,19 +8,38 @@ setInterval(updateClock, 1000);
 updateClock();
 
 function displayDate() {
-  const dateElement = document.getElementById("current-date");
+  const dateElement = document.getElementById("date-container");
   const currentDate = new Date();
   const options = { year: "numeric", month: "long", day: "numeric" };
   dateElement.textContent = currentDate.toLocaleDateString(undefined, options);
 }
 
-const date = new Date();
-const day = String(date.getDate()).padStart(2, "0");
-const month = String(date.getMonth() + 1).padStart(2, "0");
-const year = date.getFullYear();
+displayDate();
 
-// Format the date as DD-MM-YYYY
-const formattedDate = `${day}-${month}-${year}`;
+let extendNav = false;
 
-// Insert the date into the HTML element
-document.getElementById("date-container").innerText = formattedDate;
+const iconElement = document.getElementById("expendnav");
+const navigationContent = document.getElementById("navigationcontent");
+
+iconElement.addEventListener("click", () => {
+  extendNav = !extendNav;
+
+  // Toggle navigation collapse
+  if (extendNav) {
+    navigationContent.style.width = "100px"; // Adjust width for collapsed state
+    iconElement.classList.remove("fa-angles-left");
+    iconElement.classList.add("fa-angles-right");
+  } else {
+    navigationContent.style.width = "200px"; // Adjust width for expanded state
+    iconElement.classList.remove("fa-angles-right");
+    iconElement.classList.add("fa-angles-left");
+  }
+});
+
+// Mobile menu toggle
+const mobileMenuIcon = document.getElementById("mobile-menu");
+const mobileNavContent = document.getElementById("navigationcontent");
+
+mobileMenuIcon.addEventListener("click", () => {
+  mobileNavContent.classList.toggle("active");
+});
